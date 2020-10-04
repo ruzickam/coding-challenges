@@ -1,4 +1,4 @@
-# Coding Challenges
+# Coding Problems
 
 Solutions for various coding problems.
 
