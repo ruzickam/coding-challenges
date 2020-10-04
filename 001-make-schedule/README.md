@@ -1,4 +1,4 @@
-# Challenge 001 - Make schedule for classroom lectures using minimum number of rooms
+# Problem 001 - Make schedule for classroom lectures using minimum number of rooms
 
 Given an array of time intervals (start, end) for classroom lectures (possibly overlapping), find the minimum number of rooms required; and print the schedule for each room.
 
