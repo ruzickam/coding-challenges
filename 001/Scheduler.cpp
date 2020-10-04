@@ -75,7 +75,7 @@ void Scheduler::get_min_rooms(void) const
     // print min number of rooms
     std::cout << std::endl << "Minimal number of rooms required for entered lectures: " << static_cast<int>( building.size() ) << std::endl;
 
-    // print schedule - BONUS :-)
+    // print schedule for each room
     std::cout << std::endl;
     for(unsigned int i {0}; i < building.size(); ++i){ // rooms
         std::cout << "Room #" << i << ": ";

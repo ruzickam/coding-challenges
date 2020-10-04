@@ -1,8 +1,8 @@
-# Challenge 001 - Minimum number of rooms for lectures
+# Challenge 001 - Make schedule for classroom lectures using minimum number of rooms
 
-Given an array of time intervals (start, end) for classroom lectures (possibly overlapping), find the minimum number of rooms required.
+Given an array of time intervals (start, end) for classroom lectures (possibly overlapping), find the minimum number of rooms required; and print the schedule for each room.
 
-For example, given [(30, 75), (0, 50), (60, 150)], you should return 2.
+For example, given [(30, 75), (0, 50), (60, 150)], you should return 2 rooms; Room #1: (0 - 50), (60 - 150); Room #2: (30 - 75)
 
 # Compile on linux
 
