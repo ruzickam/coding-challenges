@@ -6,11 +6,11 @@ int main()
 {
     Scheduler scheduler;
 
-    if ( ! scheduler.init_from_input() ){
+    if ( ! scheduler.load_data() ){
         return 0;
     }
 
-    scheduler.get_min_rooms();
+    scheduler.print_schedule();
 
     return 0;
 }

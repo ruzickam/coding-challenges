@@ -2,7 +2,7 @@
 #include <algorithm>
 #include "Scheduler.h"
 
-bool Scheduler::init_from_input(void)
+bool Scheduler::load_data(void)
 {
     // input num of lectures
     std::cout << "Enter number of lectures: " << std::endl;
@@ -41,7 +41,7 @@ bool Scheduler::init_from_input(void)
 
 // -----------------------------------------------------------------------------------
 
-void Scheduler::get_min_rooms(void) const
+void Scheduler::print_schedule(void) const
 {
     std::vector<std::vector<std::pair<int,int>>> building; // building<room<lecture>>
     if ( lectures.size() > 0 ){
