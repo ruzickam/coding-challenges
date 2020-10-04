@@ -8,11 +8,11 @@ For example, given [(30, 75), (0, 50), (60, 150)], you should return 2 rooms; Ro
 
 $ cd ..
 
-$ mkdir build-001
+$ mkdir build-001-make-schedule
 
-$ cd build-001
+$ cd build-001-make-schedule
 
-$ qmake -o Makefile ../001/001.pro
+$ qmake -o Makefile ../001-make-schedule/001.pro
 
 $ make
 
