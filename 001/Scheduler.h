@@ -8,7 +8,7 @@ class Scheduler
 {
 public:
     bool init_from_input(void);
-    int get_min_rooms(void);
+    void get_min_rooms(void) const;
 private:
     std::vector<std::pair<int, int>> lectures;
 };

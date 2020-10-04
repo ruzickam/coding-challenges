@@ -6,11 +6,13 @@ For example, given [(30, 75), (0, 50), (60, 150)], you should return 2.
 
 # Compile on linux
 
-$ mkdir build
+$ cd ..
 
-$ cd build
+$ mkdir build-001
 
-$ qmake -o Makefile ../001.pro
+$ cd build-001
+
+$ qmake -o Makefile ../001/001.pro
 
 $ make
 

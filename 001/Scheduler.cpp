@@ -34,12 +34,14 @@ bool Scheduler::init_from_input(void)
     }
 
     // sort lectures vector for finding lecture overlaps
-    std::sort(lectures.begin(), lectures.end());
+    std::sort( lectures.begin(), lectures.end() );
 
     return true;
 }
 
-int Scheduler::get_min_rooms(void)
+// -----------------------------------------------------------------------------------
+
+void Scheduler::get_min_rooms(void) const
 {
     std::vector<std::vector<std::pair<int,int>>> building; // building<room<lecture>>
     if ( lectures.size() > 0 ){
@@ -47,7 +49,7 @@ int Scheduler::get_min_rooms(void)
         building[0].push_back( { lectures[0] } ); // add first lecture to the first room
     }
 
-    for(unsigned int i {1}; i < lectures.size(); ++i){
+    for(unsigned int i {1}; i < lectures.size(); ++i){ // i starts from 1 to skip the first lecture (that is already assigned)
         auto recently_added = false;
         for(auto& room : building){ // rooms already assigned
             auto overlap = false;
@@ -70,5 +72,21 @@ int Scheduler::get_min_rooms(void)
         }
     }
 
-    return static_cast<int>( building.size() );
+    // print min number of rooms
+    std::cout << std::endl << "Minimal number of rooms required for entered lectures: " << static_cast<int>( building.size() ) << std::endl;
+
+    // print schedule - BONUS :-)
+    std::cout << std::endl;
+    for(unsigned int i {0}; i < building.size(); ++i){ // rooms
+        std::cout << "Room #" << i << ": ";
+        for(const auto& lecture : building[i]){ // lectures
+            if ( lecture == building[i].back() ){ // last lecture
+                std::cout << "(" << lecture.first << " - " << lecture.second << ")" << std::endl;
+            } else {
+                std::cout << "(" << lecture.first << " - " << lecture.second << "), ";
+            }
+        }
+    }
+
+
 }

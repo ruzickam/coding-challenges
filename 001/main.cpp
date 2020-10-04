@@ -10,7 +10,7 @@ int main()
         return 0;
     }
 
-    std::cout << "Minimal number of rooms required for entered lectures: " << scheduler.get_min_rooms() << std::endl;
+    scheduler.get_min_rooms();
 
     return 0;
 }
