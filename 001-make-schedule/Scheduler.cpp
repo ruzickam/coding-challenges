@@ -53,9 +53,9 @@ void Scheduler::print_schedule(void) const
         auto recently_added = false;
         for(auto& room : building){ // rooms already assigned
             auto overlap = false;
-            for(const auto& assigned_lectures : room){ // lectures already assigned
+            for(const auto& assigned_lecture : room){ // lecture that is already assigned
                 // Does the lecture overlap with the assigned lecture?
-                if( ! ( lectures[i].first >= assigned_lectures.second ) ){ // overlap
+                if( ! ( lectures[i].first >= assigned_lecture.second ) ){ // overlap
                     overlap = true;
                 }
             }
